@@ -100,14 +100,18 @@ reset.addEventListener("click", () => {
     mEle.remove();
 
     // new table created 
-    let tableDiv = document.getElementById("tableDiv");
+    
     mEle = document.createElement("table");
     mEle.id = "table-1";
     mEle.className = "table";
     // new table append in table div
-    tableDiv.appendChild(mEle);
 
+    // let tableDiv = document.getElementById("tableDiv");
+    // tableDiv.appendChild(mEle);
+    // OR 
+    document.querySelector(".tableDiv").appendChild(mEle);
 
+    document.querySelector(".restart").innerText = "RESTART";
     lapNum = 0;
     rabc();
 });
